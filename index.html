@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Gmail Bulk Sender — Send Personalized Emails in Batches</title>
+  <meta name="description" content="Gmail Bulk Sender lets you send small batches of personalized emails from Gmail using CSV + HTML templates. All processing stays in your browser." />
+  <style>
+    :root {
+      --text: #1f2933;
+      --muted: #5a6b79;
+      --bg: #ffffff;
+      --border: #e5e7eb;
+      --accent: #2563eb;
+      --accent-soft: #e8f0ff;
+      --card: #f9fafb;
+      --radius: 14px;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.6;
+    }
+
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    header {
+      border-bottom: 1px solid var(--border);
+      background: #fff;
+      position: sticky;
+      top: 0;
+      z-index: 5;
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 16px 0;
+      gap: 16px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    .logo {
+      width: 40px;
+      height: 40px;
+      border-radius: 8px;
+      background: var(--accent-soft);
+      border: 1px solid var(--border);
+      display: grid;
+      place-items: center;
+      font-size: 14px;
+      color: var(--accent);
+      font-weight: 700;
+    }
+
+    nav a {
+      margin-left: 16px;
+      font-size: 0.95rem;
+      color: var(--muted);
+    }
+
+    .hero {
+      padding: 56px 0 36px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 28px;
+      align-items: center;
+    }
+
+    .hero-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 28px;
+    }
+
+    h1 {
+      font-size: clamp(2rem, 3.4vw, 2.8rem);
+      margin: 0 0 12px;
+      line-height: 1.2;
+    }
+
+    h2 {
+      margin: 0 0 12px;
+      font-size: 1.35rem;
+    }
+
+    p { margin: 0 0 14px; color: var(--muted); }
+
+    .steps {
+      margin: 20px 0 0;
+      padding-left: 18px;
+      color: var(--text);
+    }
+
+    .steps li { margin-bottom: 8px; }
+
+    .cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--accent);
+      color: #fff;
+      padding: 10px 18px;
+      border-radius: 999px;
+      font-weight: 600;
+    }
+
+    .highlight {
+      border-left: 3px solid var(--accent);
+      padding-left: 14px;
+      color: var(--text);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+      margin: 22px 0 8px;
+    }
+
+    .card {
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 18px;
+      background: #fff;
+    }
+
+    footer {
+      border-top: 1px solid var(--border);
+      margin-top: 40px;
+      padding: 20px 0 36px;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .footer-links a { margin-right: 16px; }
+
+    @media (max-width: 720px) {
+      nav { display: flex; flex-wrap: wrap; gap: 8px; }
+      nav a { margin-left: 0; }
+      .cta { width: 100%; justify-content: center; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="brand">
+        <div class="logo">GBS</div>
+        <span>Gmail Bulk Sender</span>
+      </div>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="tos.html">Terms</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div>
+        <h1>Send personalized emails in small batches from Gmail.</h1>
+        <p>
+          Gmail Bulk Sender helps you deliver individualized emails directly from your Gmail account.
+          Upload a CSV and HTML template, preview the merge, and send—without any backend server.
+        </p>
+        <p class="highlight">
+          All processing stays in your browser. Your data never leaves your device.
+        </p>
+        <a class="cta" href="privacy.html">Read the privacy policy</a>
+      </div>
+      <div class="hero-card">
+        <h2>How it works</h2>
+        <ol class="steps">
+          <li>Login with Google OAuth.</li>
+          <li>Upload your CSV list.</li>
+          <li>Upload an HTML template.</li>
+          <li>Send a small batch of personalized emails.</li>
+        </ol>
+      </div>
+    </section>
+
+    <section>
+      <h2>Why Gmail Bulk Sender</h2>
+      <div class="grid">
+        <div class="card">
+          <strong>Local-only processing</strong>
+          <p>CSV and HTML templates are processed locally in the browser.</p>
+        </div>
+        <div class="card">
+          <strong>Simple workflow</strong>
+          <p>Go from login to send in just a few minutes.</p>
+        </div>
+        <div class="card">
+          <strong>Secure authentication</strong>
+          <p>Uses Google OAuth for secure Gmail access.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="tos.html">Terms of Service</a>
+      </div>
+      <div>© 2026 Gmail Bulk Sender. All rights reserved.</div>
+    </div>
+  </footer>
+</body>
+</html>
